@@ -25,12 +25,6 @@ class SubChildCategoryController extends Controller
         ]);
     }
 
-
-    public function create()
-    {
-        //
-    }
-
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -61,16 +55,6 @@ class SubChildCategoryController extends Controller
 
     }
 
-    public function show($id)
-    {
-        //
-    }
-
-    public function edit($id)
-    {
-        //
-    }
-
     public function update(Request $request)
     {
         $catId = ChildCategory::where('id',$request->edit_child_category_id)->get();
@@ -88,8 +72,4 @@ class SubChildCategoryController extends Controller
         return redirect()->back();
     }
 
-    public function destroy($id)
-    {
-        return redirect()->back();
-    }
 }

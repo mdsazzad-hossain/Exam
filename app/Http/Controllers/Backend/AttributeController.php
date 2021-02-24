@@ -24,13 +24,6 @@ class AttributeController extends Controller
         ]);
     }
 
-
-    public function create()
-    {
-        //
-    }
-
-
     public function store(Request $request)
     {
         $product = Attribute::where('product_id',$request->product_id)->where('size',$request->size[0])->first();
@@ -55,30 +48,6 @@ class AttributeController extends Controller
 
     }
 
-
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -110,14 +79,4 @@ class AttributeController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }
